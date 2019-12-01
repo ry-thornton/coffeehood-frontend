@@ -6,7 +6,7 @@ function Footer(props){
         
         <div className='App-footer'>
 
-            This is the footer. 
+            Final Project
         </div>
     )
 }

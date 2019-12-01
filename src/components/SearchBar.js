@@ -9,9 +9,18 @@ class SearchBar extends React.Component{
     }
     submitHandler = (event) => {
         event.preventDefault()
-        console.log(this.state.term)
+        this.props.searchShops(this.state.term)
     }
     
+
+
+
+    // search = () => {
+    //     fetch('https://developers.zomato.com/api/v2.1/search?entity_id=94741&entity_type=zone&cuisines=55&apikey=d867fa503de492da9df396f5f2fbb9c6')
+    //     .then(response => response.json())
+    //     .then(shops => shops["restaurants"].map(shop => console.log(shop)))
+    // }
+
 
     render(){
         return(
@@ -22,7 +31,7 @@ class SearchBar extends React.Component{
                 type='text' 
                 name='term' 
                 value={this.state.term} 
-                placeholder='Enter zip code...' 
+                placeholder='Enter city or address...' 
                 onChange={this.changeHandler }/>
                 <input type='submit' value='Search!'/>
 
