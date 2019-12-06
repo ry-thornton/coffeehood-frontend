@@ -2,23 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: beige;
+  color: #36614B;
+  padding-top: 25px;
+  padding-bottom: 5px; 
+  font-family: "Open Sans", sans-serif
+
 }
 
 .App-footer {
-  position: fixed;
+
   left: 0;
   bottom: 0;
   width: 100%;
@@ -30,3 +24,89 @@
 .App-link { 
   color: #09d3ac;
 }
+
+.Map-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.Shop-container {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.Landing-page {
+  height: 100vh;
+  background-color: beige;
+}
+
+.Landing-page-logo {
+  font-family:'Monoton', cursive;
+  color: #36614B;
+  font-size: 50px;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+}
+
+.Featured-page { 
+  height: 100vh;
+  background-color: #36614B;
+}
+
+input[type=text] {
+  border-radius: 10px;
+  background-color: beige;
+  border: 2px solid #36614B; 
+  padding: 10px 10px;
+  outline: none;
+  width: 50%;
+}
+
+.Container {
+  background-color: beige;
+}
+
+.Greeting {
+  padding-top: 10vh;
+  font-size: larger;
+  font-family: "Open Sans", sans-serif;
+  color: #36614B;
+  font-weight: 200
+}
+
+input[type=submit] {
+  color: beige;
+  background-color: #36614B;
+  border-radius: 5px;
+}
+
+
+.Search-column{
+  padding-top: 20px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.Shop-card{
+  padding-bottom: 20px;
+}
+
+input[type=password]{
+  border-radius: 10px;
+  background-color: beige;
+  border: 2px solid #36614B; 
+  padding: 10px 10px;
+  outline: none;
+  width: 50%;
+}
+
+
+
+
+

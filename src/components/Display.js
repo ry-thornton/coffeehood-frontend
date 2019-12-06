@@ -1,11 +1,13 @@
 import React from 'react'
 import SearchBar from './SearchBar.js'
-import SearchContainer from '../containers/SearchContainer'
-
+import SearchContainer from '../containers/SearchContainer';
+import Header from './Header.js'
+import LoginForm from './LoginForm.js'
 
 class Display extends React.Component{
     state = {
-        loggedIn: false,
+        user: null,
+        loggingIn: false,
         searchLat: null,
         searchLon: null,
         shops: null
@@ -19,6 +21,15 @@ class Display extends React.Component{
         this.setState({searchLat: null, searchLon: null})
     }
 
+    goToLogin = () => {
+        this.setState({loggingIn: true})
+    }
+
+    login = (user) => {
+        this.setState({loggingIn: false, user: user})
+    }
+
+
     search = (location) => {
         fetch(`https://us1.locationiq.com/v1/search.php?key=97e3586cc4161f&q=${location}&format=json`)
         .then(response => response.json())
@@ -28,19 +39,31 @@ class Display extends React.Component{
    render () {
        
        return (
-        this.state.searchLat && this.state.searchLon ?
         <div>
-        <span onClick={this.home}>Home</span>
-        <br/>
-        <SearchBar searchShops={this.searchShops} />
-        <SearchContainer key={this.state.searchLat} lat={this.state.searchLat} lon={this.state.searchLon} />
+        {this.state.loggingIn ? <div className="Landing-page"><Header home={this.home}/><LoginForm login={this.login}/></div> : <div>
+        {this.state.searchLat && this.state.searchLon ?
+        <div>
+            <Header home={this.home} login={this.goToLogin}/>
+            <div className="Container">
+                <SearchBar searchShops={this.searchShops} />
+                <SearchContainer key={this.state.searchLat} lat={this.state.searchLat} lon={this.state.searchLon} />
+            </div>
         </div>
         :
         <div>
-            Find a unique coffee shop for you... 
-
-            <SearchBar searchShops={this.searchShops} />
+            <Header home={this.home} login={this.goToLogin}/>
+            <div className="Landing-page">
+                {this.state.user ? <div><br/>Welcome {this.state.user.username}</div> : null}
+                <div className={"Greeting"}>Find a unique coffee shop for you...</div >
+                <br/>
+                <SearchBar searchShops={this.searchShops} />
             </div>
+             <div className="Featured-page">
+            
+
+             </div>
+        </div> } </div>  }
+             </div>
        )
     }
     

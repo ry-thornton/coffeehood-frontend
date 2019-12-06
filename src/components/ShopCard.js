@@ -9,13 +9,11 @@ import HoursButton from './HoursButton.js';
 class ShopCard extends React.Component {
     render (){
         return (
-            
-            <Card style={{ width: '18rem' }}>
+            <div className="Shop-card">
+            <Card style={{ width: "18rem"}}>
                 <Card.Img variant="top" src={this.props.image}  />
                 <Card.Body>
                 <Card.Title>{this.props.name}</Card.Title>
-                <br/>
-                <br/>
                <Card.Text>
                 {this.props.address}
                </Card.Text>
@@ -30,6 +28,7 @@ class ShopCard extends React.Component {
                 </Card.Body>
               {/* <Button variant="primary">Favorite</Button> */}
             </Card>
+            </div>
         )
     }
 }
