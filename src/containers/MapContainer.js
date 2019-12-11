@@ -17,12 +17,12 @@ class MapContainer extends React.Component {
         //Promp search function - as user moves map the viewport in state changes
         //This function listens to those changes and prompts user to redo a search in a new area
         //if there is a significant change in distance
-        //The the current latitude of the map is subtracted from the latitude of the map when it originally
+        //The the current latitude/longitude of the map is subtracted from the latitude/longitude of the map when it originally
         //rendered and if the absolute value of the difference is greater than a .003 change
         //the distanceChange in state is set to true which then provides the user with a button
         //that enables them to re search shops
         promptSearch = () => {
-            return !this.state.distanceChange && (Math.abs(this.props.lat - this.state.viewport.latitude)  > .003) ? this.setState({distanceChange: true}) : null 
+            return !this.state.distanceChange && ((Math.abs(this.props.lat - this.state.viewport.latitude)  > .003) || (Math.abs(this.props.lon - this.state.viewport.longitude) > .003)) ? this.setState({distanceChange: true}) : null 
         }
 
 
