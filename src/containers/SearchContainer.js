@@ -27,20 +27,20 @@ shops: [],
         return (
         <div className="Container">
         <Container>
-        <Row>
-        <Col>
-        <div className="Search-column">
-         {this.state.shops.map(shop => <ShopCard key={shop["restaurant"]["id"]} id={shop["restaurant"]["id"]} name={shop["restaurant"]["name"]}  phone_numbers={shop["restaurant"]["phone_numbers"]} address={shop["restaurant"]["location"]["address"]} image={shop["restaurant"]["featured_image"]} tags={shop["restaurant"]["highlights"] } hours={shop["restaurant"]["timings"]}/>)}
-         </div>
-        </Col> 
-         <Col>
-         <div className="Search-column">   
-        <MapContainer lat={this.props.lat}   lon={this.props.lon}  shops={this.state.shops} search={this.search}/>
+          <Row>
+            <Col>
+              <div className="Search-column">
+                {this.state.shops.map(shop => <ShopCard key={shop["restaurant"]["id"]} id={shop["restaurant"]["id"]} name={shop["restaurant"]["name"]}  phone_numbers={shop["restaurant"]["phone_numbers"]} address={shop["restaurant"]["location"]["address"]} image={shop["restaurant"]["featured_image"]} tags={shop["restaurant"]["highlights"] } hours={shop["restaurant"]["timings"]}/>)}
+              </div>
+            </Col> 
+            <Col>
+              <div className="Search-column">   
+                <MapContainer lat={this.props.lat}   lon={this.props.lon}  shops={this.state.shops} search={this.search}/>
+              </div>
+            </Col> 
+          </Row>
+        </Container>
         </div>
-        </Col> 
-         </Row>
-         </Container>
-         </div>
     ) }
 }
 

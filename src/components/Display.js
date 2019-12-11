@@ -12,24 +12,31 @@ class Display extends React.Component{
         searchLon: null,
         shops: null
     }
-
-    searchShops = (location) => {
-        this.search(location)
-    }
    
+    //Sets the latitude and longitude in state to null
+    //Render function uses latitude and longitude to determine if home page
+    //or search page should be shown
     home = () => {
         this.setState({searchLat: null, searchLon: null})
     }
 
+    //Sets loggingIn state to true
+    //Render function uses loggingIn to determine if login form should be shown
     goToLogin = () => {
         this.setState({loggingIn: true})
     }
 
+    //This function is used on login form, 
+    //Value of user/username is used to display a welcome message on home page
+    //loggingIn is set to false to show home page again
     login = (user) => {
         this.setState({loggingIn: false, user: user})
     }
 
-
+    //Search function that takes in an argument of location - this argument is a string
+    //A fetch is made to LocationIQ api with location interpolated into url
+    //Api returns a JSON file with latitude and longitude of location searched
+    //These values are used to set latitude and longitude in state - this is passed down to search container
     search = (location) => {
         fetch(`https://us1.locationiq.com/v1/search.php?key=97e3586cc4161f&q=${location}&format=json`)
         .then(response => response.json())
@@ -40,30 +47,28 @@ class Display extends React.Component{
        
        return (
         <div>
-        {this.state.loggingIn ? <div className="Landing-page"><Header home={this.home}/><LoginForm login={this.login}/></div> : <div>
-        {this.state.searchLat && this.state.searchLon ?
-        <div>
-            <Header home={this.home} login={this.goToLogin}/>
-            <div className="Container">
-                <SearchBar searchShops={this.searchShops} />
-                <SearchContainer key={this.state.searchLat} lat={this.state.searchLat} lon={this.state.searchLon} />
-            </div>
+            {this.state.loggingIn ? <div className="Landing-page"><Header home={this.home}/><LoginForm login={this.login}/></div> : 
+            <div>
+            {this.state.searchLat && this.state.searchLon ?
+                <div>
+                    <Header home={this.home} login={this.goToLogin}/>
+                    <div className="Container">
+                    <SearchBar search={this.search} />
+                    <SearchContainer key={this.state.searchLat} lat={this.state.searchLat} lon={this.state.searchLon} />
+                    </div>
+                </div>
+            :
+                <div>
+                    <Header home={this.home} login={this.goToLogin}/>
+                    <div className="Landing-page">
+                    {this.state.user ? <div><br/>Welcome {this.state.user.username}</div> : null}
+                        <div className={"Greeting"}>Find a unique coffee shop for you...</div >
+                        <br/>
+                        <SearchBar search={this.search} />
+                    </div>
+                </div>} 
+            </div>  }
         </div>
-        :
-        <div>
-            <Header home={this.home} login={this.goToLogin}/>
-            <div className="Landing-page">
-                {this.state.user ? <div><br/>Welcome {this.state.user.username}</div> : null}
-                <div className={"Greeting"}>Find a unique coffee shop for you...</div >
-                <br/>
-                <SearchBar searchShops={this.searchShops} />
-            </div>
-             <div className="Featured-page">
-            
-
-             </div>
-        </div> } </div>  }
-             </div>
        )
     }
     

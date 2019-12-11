@@ -9,6 +9,11 @@ class LoginForm extends React.Component{
 
     }
 
+
+
+    //Submit handler that sends fetch request to backend of application creating a user
+    //Information about user from state is passed into fetch through body
+    //Then login function is called to "go back" to home page and greet user with new username
     submitHandler = (event) => {
         debugger
         event.preventDefault()
@@ -29,9 +34,11 @@ class LoginForm extends React.Component{
         .then(data => this.props.login(data) )
     }
 
+    //Change handler function to ensure form is contolled
     changeHandler = (event) => {
         this.setState({[event.target.name]: event.target.value})
     }
+    
     render(){
         return (
         <form onSubmit={this.submitHandler}>
