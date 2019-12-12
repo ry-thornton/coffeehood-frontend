@@ -8,7 +8,7 @@ function Header(props) {
     return( 
         <div className="App-header" >
             <span className="Landing-page-logo">
-                UNIQE
+                COFFEEHOOD
             </span>
             <br/>
             <span><span onClick={props.home}>Home</span> | Featured | <span onClick={props.login}>Login</span></span>

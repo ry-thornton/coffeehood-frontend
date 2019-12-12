@@ -1,74 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## CoffeeHood - A coffee shop finder
 
-## Available Scripts
+This web application is a final project I completed as part of my curriculum at Flatiron School's software engineering program. It was built using a React front-end and a Ruby on Rails back-end. Styling was done using Bootstrap and custom CSS.
 
-In the project directory, you can run:
+## Message to the User
 
-### `yarn start`
+It's a Monday night, 7 pm, you have an important project due tomorrow for school/work, and you need some caffeine to keep your brain running at full speed.  You don't want to make coffee at home because the Keurig machine is broken, and frankly, your sick of mediocre k cups.  Where can you go nearby that has awesome coffee, is open late, is quiet like home, and facilitates focus?  This is where this application comes in.
 
-Runs the app in the development mode.<br />
+I found that the cafe industry was lacking a decent search and locate app. Yes, I know there is Yelp - but I felt cafes needed their own app - where you could search and filter by uniqe tags such as "good for studying" or "cozy", and find their locations using an easy to use interactive map. This application is the start of my effort to build something that helps people do this.  It is a work in progress, and far from finished - I will be continuing to add features such as filtered searches and improving show pages.  Feel free to add features and contribute to this project!
+
+## How to Use
+
+To begin using this application, first fork and clone this repository.
+Then, in your terminal run:
+
+### yarn start
+
+or
+
+### npm start
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# uniqe
-<<<<<<< HEAD
-# uniqe
-# uniqe-frontend
-=======
->>>>>>> parent of 5f310c3... first commit
