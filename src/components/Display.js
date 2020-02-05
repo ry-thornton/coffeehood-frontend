@@ -51,11 +51,11 @@ class Display extends React.Component{
        
        return (
         <div>
-            <Navbar bg="light">
-                <Navbar.Brand>CoffeeHood</Navbar.Brand>
-                    <Nav.Link onClick={this.home}>Home</Nav.Link>
-                    <Nav.Link>Featured</Nav.Link>
-                    <Nav.Link onClick={this.goToLogin}>Login</Nav.Link>
+            <Navbar className="Nav-bar">
+                <Navbar.Brand className="Nav-text">CoffeeHood</Navbar.Brand>
+                    <Nav.Link className="Nav-text" onClick={this.home}>Home</Nav.Link>
+                    <Nav.Link className="Nav-text">Featured</Nav.Link>
+                    <Nav.Link className="Nav-text" onClick={this.goToLogin}>Login</Nav.Link>
             </Navbar>
 
             {this.state.loggingIn ? 
@@ -75,9 +75,16 @@ class Display extends React.Component{
                 <div>
                     <div className="Landing-page">
                     {this.state.user ? <div><br/>Welcome {this.state.user.username}</div> : null}
-                        <div className={"Greeting"}>Find a unique coffee shop for you...</div >
+                        <div className={"Greeting"}>
+                            <div className="Greeting-text"> 
+                                <span>Welcome to CoffeeHood!</span>
+                                <br/>
+                                <span>A place for you to find a coffee shop just for you...</span>
+                            </div>
+                        </div >
                         <br/>
                         <SearchBar search={this.search} />
+                        <img src="cafe.jpg" className="Cafe-picture"/>
                     </div>
                 </div>} 
             </div>  }

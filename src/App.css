@@ -3,8 +3,8 @@
 }
 
 .App-header {
-  background-color: beige;
-  color: #36614B;
+  background-color: #FBFFFE;
+  color: #072739;
   padding-top: 25px;
   padding-bottom: 5px; 
   font-family: "Open Sans", sans-serif
@@ -40,14 +40,25 @@
 }
 
 .Landing-page {
-  height: 100vh;
-  background-color: beige;
+  height: 200vh;
+  background-color: #FBFFFE;
   padding-top: 20px;
+}
+
+.Nav-bar {
+  background-color: #FBFFFE;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #072739;
+}
+
+.Nav-text {
+  color: #072739;
 }
 
 .Landing-page-logo {
   font-family:'Monoton', cursive;
-  color: #36614B;
+  color: #072739;
   font-size: 50px;
   padding-top: 100px;
   padding-right: 100px;
@@ -55,15 +66,22 @@
   padding-left: 100px;
 }
 
+.Greeting-text {
+  margin: auto;
+  width: 50vw;
+  text-align: left;
+  padding-left: 10px
+}
+
 .Featured-page { 
   height: 100vh;
-  background-color: #36614B;
+  background-color: #072739;
 }
 
 input[type=text] {
   border-radius: 10px;
-  background-color: beige;
-  border: 2px solid #36614B; 
+  background-color: #FBFFFE;
+  border: 2px solid #072739; 
   padding: 10px 10px;
   outline: none;
   width: 50%;
@@ -72,20 +90,20 @@ input[type=text] {
 }
 
 .Container {
-  background-color: beige;
+  background-color: #FBFFFE;
 }
 
 .Greeting {
   padding-top: 10vh;
   font-size: larger;
   font-family: "Open Sans", sans-serif;
-  color: #36614B;
+  color: #072739;
   font-weight: 200
 }
 
 .Login {
   border-radius: 10px;
-  background-color: #36614B;
+  background-color: #072739;
   margin: auto;
   width: 40vw;
   padding-top: 20px;
@@ -94,8 +112,8 @@ input[type=text] {
 }
 
 input[type=submit] {
-  color: beige;
-  background-color: #36614B;
+  color: #FBFFFE;
+  background-color: #072739;
   border-radius: 5px;
   display: block;
   margin: auto
@@ -114,13 +132,21 @@ input[type=submit] {
 
 input[type=password]{
   border-radius: 10px;
-  background-color: beige;
-  border: 2px solid #36614B; 
+  background-color: #FBFFFE;
+  border: 2px solid #072739; 
   padding: 10px 10px;
   outline: none;
   width: 50%;
   display: block;
   margin: auto
+}
+
+.Cafe-picture {
+  margin: auto;
+  padding-top: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50vw
 }
 
 
