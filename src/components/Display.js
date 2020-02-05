@@ -3,6 +3,9 @@ import SearchBar from './SearchBar.js'
 import SearchContainer from '../containers/SearchContainer';
 import Header from './Header.js'
 import LoginForm from './LoginForm.js'
+import Navbar from 'react-bootstrap/Navbar'
+import { Nav } from 'react-bootstrap';
+
 
 class Display extends React.Component{
     state = {
@@ -47,6 +50,12 @@ class Display extends React.Component{
        
        return (
         <div>
+            <Navbar bg="light">
+                <Navbar.Brand>CoffeeHood</Navbar.Brand>
+                    <Nav.Link onClick={this.home}>Home</Nav.Link>
+                    <Nav.Link>Featured</Nav.Link>
+                    <Nav.Link onClick={this.goToLogin}>Login</Nav.Link>
+            </Navbar>
             {this.state.loggingIn ? <div className="Landing-page"><Header home={this.home}/><LoginForm login={this.login}/></div> : 
             <div>
             {this.state.searchLat && this.state.searchLon ?

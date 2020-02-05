@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col'
 import MapContainer from './MapContainer.js';
 import '../App.css'
 import Row from 'react-bootstrap/Row'
+import ListGroup from 'react-bootstrap/ListGroup'
+
 
 class SearchContainer extends React.Component{
    state = {
@@ -30,7 +32,7 @@ shops: [],
           <Row>
             <Col>
               <div className="Search-column">
-                {this.state.shops.map(shop => <ShopCard key={shop["restaurant"]["id"]} id={shop["restaurant"]["id"]} name={shop["restaurant"]["name"]}  phone_numbers={shop["restaurant"]["phone_numbers"]} address={shop["restaurant"]["location"]["address"]} image={shop["restaurant"]["featured_image"]} tags={shop["restaurant"]["highlights"] } hours={shop["restaurant"]["timings"]}/>)}
+                {this.state.shops.map( shop => <ShopCard key={shop["restaurant"]["id"]} id={shop["restaurant"]["id"]} name={shop["restaurant"]["name"]}  phone_numbers={shop["restaurant"]["phone_numbers"]} address={shop["restaurant"]["location"]["address"]} image={shop["restaurant"]["featured_image"]} tags={shop["restaurant"]["highlights"] } hours={shop["restaurant"]["timings"]}/>)}
               </div>
             </Col> 
             <Col>
@@ -45,3 +47,9 @@ shops: [],
 }
 
 export default SearchContainer
+
+//<ListGroup>
+  //      {this.state.shops.map(shop => <div><ListGroup.Item>{shop["restaurant"]["name"]}</ListGroup.Item> <br/></div>)}
+    //            </ListGroup>
+
+//<ShopCard key={shop["restaurant"]["id"]} id={shop["restaurant"]["id"]} name={shop["restaurant"]["name"]}  phone_numbers={shop["restaurant"]["phone_numbers"]} address={shop["restaurant"]["location"]["address"]} image={shop["restaurant"]["featured_image"]} tags={shop["restaurant"]["highlights"] } hours={shop["restaurant"]["timings"]}/>)
