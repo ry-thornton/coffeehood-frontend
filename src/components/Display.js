@@ -20,7 +20,7 @@ class Display extends React.Component{
     //Render function uses latitude and longitude to determine if home page
     //or search page should be shown
     home = () => {
-        this.setState({searchLat: null, searchLon: null})
+        this.setState({searchLat: null, searchLon: null, loggingIn: false})
     }
 
     //Sets loggingIn state to true
@@ -46,6 +46,7 @@ class Display extends React.Component{
         .then(data => this.setState({searchLat: parseFloat(data[0]['lat']), searchLon: parseFloat(data[0]['lon'])})) 
     }
 
+
    render () {
        
        return (
@@ -56,11 +57,15 @@ class Display extends React.Component{
                     <Nav.Link>Featured</Nav.Link>
                     <Nav.Link onClick={this.goToLogin}>Login</Nav.Link>
             </Navbar>
-            {this.state.loggingIn ? <div className="Landing-page"><Header home={this.home}/><LoginForm login={this.login}/></div> : 
+
+            {this.state.loggingIn ? 
+
+            <div className="Landing-page">
+                <LoginForm login={this.login}/>
+            </div> : 
             <div>
             {this.state.searchLat && this.state.searchLon ?
                 <div>
-                    <Header home={this.home} login={this.goToLogin}/>
                     <div className="Container">
                     <SearchBar search={this.search} />
                     <SearchContainer key={this.state.searchLat} lat={this.state.searchLat} lon={this.state.searchLon} />
@@ -68,7 +73,6 @@ class Display extends React.Component{
                 </div>
             :
                 <div>
-                    <Header home={this.home} login={this.goToLogin}/>
                     <div className="Landing-page">
                     {this.state.user ? <div><br/>Welcome {this.state.user.username}</div> : null}
                         <div className={"Greeting"}>Find a unique coffee shop for you...</div >

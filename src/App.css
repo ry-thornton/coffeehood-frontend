@@ -42,6 +42,7 @@
 .Landing-page {
   height: 100vh;
   background-color: beige;
+  padding-top: 20px;
 }
 
 .Landing-page-logo {
@@ -66,6 +67,8 @@ input[type=text] {
   padding: 10px 10px;
   outline: none;
   width: 50%;
+  display: block;
+  margin: auto
 }
 
 .Container {
@@ -80,10 +83,22 @@ input[type=text] {
   font-weight: 200
 }
 
+.Login {
+  border-radius: 10px;
+  background-color: #36614B;
+  margin: auto;
+  width: 40vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
 input[type=submit] {
   color: beige;
   background-color: #36614B;
   border-radius: 5px;
+  display: block;
+  margin: auto
 }
 
 
@@ -104,6 +119,8 @@ input[type=password]{
   padding: 10px 10px;
   outline: none;
   width: 50%;
+  display: block;
+  margin: auto
 }
 
 
