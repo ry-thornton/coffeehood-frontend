@@ -86,9 +86,15 @@ class Display extends React.Component{
                         <SearchBar search={this.search} />
                     </div>
                     <div className="Featured-page">
-                        {/* <div>
+                        <div className="How-to">
                             How to use CoffeeHood
-                        </div> */}
+                            <br/>
+                            1. Enter a city, address, or any location
+                                <br/>
+                            2. Hit search and receive a list of coffee shops
+                                <br/>
+                            3.
+                        </div>
                         <img src="cafe.jpg" className="Cafe-picture"/>
                     </div>
                 </div>} 

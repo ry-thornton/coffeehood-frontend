@@ -17,9 +17,12 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: grey;
+  height: 10vh;
+  background-color: #072739;
   color: white;
-  text-align: center;
+  padding-left: 10px;
+  padding-top:10px;
+  text-align: left;
 }
 
 .App-link { 
@@ -158,6 +161,18 @@ input[type=password]{
   width: 50vw;
   float: right
 }
+
+.How-to {
+  float: left; 
+  margin-left: 5vw;
+  margin-top: 70px;
+  padding-left: 20px;
+  font-size: 24px;
+  border-left: solid;
+  border-color: #FBFFFE;
+  text-align: left
+}
+
 
 
 

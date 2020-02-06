@@ -5,8 +5,7 @@ function Footer(props){
     return (
         
         <div className='App-footer'>
-
-            Final Project
+            Created by Ryan Thornton
         </div>
     )
 }
