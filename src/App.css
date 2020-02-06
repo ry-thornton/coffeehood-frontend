@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .App-header {
@@ -7,7 +8,7 @@
   color: #072739;
   padding-top: 25px;
   padding-bottom: 5px; 
-  font-family: "Open Sans", sans-serif
+  font-family: 'Josefin Sans', sans-serif;
 
 }
 
@@ -40,16 +41,13 @@
 }
 
 .Landing-page {
-  height: 200vh;
+  height: 80vh;
   background-color: #FBFFFE;
   padding-top: 20px;
 }
 
 .Nav-bar {
   background-color: #FBFFFE;
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-color: #072739;
 }
 
 .Nav-text {
@@ -73,9 +71,20 @@
   padding-left: 10px
 }
 
+#Greeting-big-text {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 36px
+}
+
+#Greeting-small-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px
+}
+
 .Featured-page { 
   height: 100vh;
   background-color: #072739;
+  color: #FBFFFE;
 }
 
 input[type=text] {
@@ -142,11 +151,12 @@ input[type=password]{
 }
 
 .Cafe-picture {
-  margin: auto;
+  display: block;
+  /* margin: auto; */
   padding-top: 70px;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 50vw
+  padding-right: 5vw;
+  width: 50vw;
+  float: right
 }
 
 

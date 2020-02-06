@@ -51,7 +51,7 @@ class Display extends React.Component{
        
        return (
         <div>
-            <Navbar className="Nav-bar">
+            <Navbar sticky="top" className="Nav-bar">
                 <Navbar.Brand className="Nav-text">CoffeeHood</Navbar.Brand>
                     <Nav.Link className="Nav-text" onClick={this.home}>Home</Nav.Link>
                     <Nav.Link className="Nav-text">Featured</Nav.Link>
@@ -77,13 +77,18 @@ class Display extends React.Component{
                     {this.state.user ? <div><br/>Welcome {this.state.user.username}</div> : null}
                         <div className={"Greeting"}>
                             <div className="Greeting-text"> 
-                                <span>Welcome to CoffeeHood!</span>
+                                <span id={"Greeting-big-text"}>Welcome to CoffeeHood!</span>
                                 <br/>
-                                <span>A place for you to find a coffee shop just for you...</span>
+                                <span id={"Greeting-small-text"}>A place for you to find a coffee shop just for you...</span>
                             </div>
                         </div >
                         <br/>
                         <SearchBar search={this.search} />
+                    </div>
+                    <div className="Featured-page">
+                        {/* <div>
+                            How to use CoffeeHood
+                        </div> */}
                         <img src="cafe.jpg" className="Cafe-picture"/>
                     </div>
                 </div>} 
