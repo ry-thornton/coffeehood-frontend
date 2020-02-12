@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchBar from './SearchBar.js'
 import SearchContainer from '../containers/SearchContainer';
-import Header from './Header.js'
+import SignUp from './SignUp.js'
 import LoginForm from './LoginForm.js'
 import Navbar from 'react-bootstrap/Navbar'
 import { Nav } from 'react-bootstrap';
@@ -11,6 +11,7 @@ class Display extends React.Component{
     state = {
         user: null,
         loggingIn: false,
+        hasAccount: true,
         searchLat: null,
         searchLon: null,
         shops: null
@@ -26,8 +27,13 @@ class Display extends React.Component{
     //Sets loggingIn state to true
     //Render function uses loggingIn to determine if login form should be shown
     goToLogin = () => {
-        this.setState({loggingIn: true})
+        this.setState({loggingIn: true, hasAccount: true})
     }
+
+    goToSignUp = () => {
+        this.setState({hasAccount: false})
+    }
+
 
     //This function is used on login form, 
     //Value of user/username is used to display a welcome message on home page
@@ -58,10 +64,19 @@ class Display extends React.Component{
                     <Nav.Link className="Nav-text" onClick={this.goToLogin}>Login</Nav.Link>
             </Navbar>
 
-            {this.state.loggingIn ? 
+            {this.state.loggingIn ?
+            <div>
+                {this.state.hasAccount ?
+                <div className="Landing-page">
+                    <LoginForm goToSignUp={this.goToSignUp}/>
+                    {/* <LoginForm login={this.login}/> */}
+                </div>
+                :
+                <div className="Landing-page">
+                    <SignUp goToLogin={this.goToLogin}/>
 
-            <div className="Landing-page">
-                <LoginForm login={this.login}/>
+                </div>
+                }
             </div> : 
             <div>
             {this.state.searchLat && this.state.searchLon ?
